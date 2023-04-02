@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class Footer<V: SupplementaryViewBinding & UICollectionReusableView>: SupplementaryItemEraser, Hashable {
 
     let id: String
@@ -41,6 +42,7 @@ final class Footer<V: SupplementaryViewBinding & UICollectionReusableView>: Supp
     }
 }
 
+@available(iOS 13.0, *)
 extension Footer: SupplementaryItemConfig {
     func supplementary(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView {
         collectionView.registerSupplementaryView(kind: kind, V.self)

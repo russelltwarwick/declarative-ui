@@ -6,27 +6,31 @@
 //
 
 import UIKit
-
+@available(iOS 13.0, *)
 protocol SupplementaryViewBinding {
     associatedtype Model: Hashable
     func update(_ model: Model)
     func didChangePage(_ page: Int)
 }
 
+@available(iOS 13.0, *)
 extension SupplementaryViewBinding {
     func didChangePage(_ page: Int) {}
 }
 
+@available(iOS 13.0, *)
 protocol SupplementaryItemEraser {
     func toSupplementaryItem() -> SupplementaryItem
 }
 
+@available(iOS 13.0, *)
 protocol SupplementaryItemConfig {
     func supplementary(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView
     func supplementaryLayout() -> NSCollectionLayoutBoundarySupplementaryItem?
     func didChangePage(_ page: Int)
 }
 
+@available(iOS 13.0, *)
 struct SupplementaryItem: Hashable  {
     
     let id: Int
@@ -64,6 +68,7 @@ struct SupplementaryItem: Hashable  {
 
 // MARK: SupplementaryItemConfig
 
+@available(iOS 13.0, *)
 extension SupplementaryItem: SupplementaryItemConfig {
     func supplementaryLayout() -> NSCollectionLayoutBoundarySupplementaryItem? {
         .init(layoutSize: .init(widthDimension: .fractionalWidth(1.0),

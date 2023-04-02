@@ -34,9 +34,6 @@ final class TestCell: UICollectionViewCell {
         contentView.backgroundColor = .clear
         setConstraints()
         style()
-        button.addAction(.init(handler: { _ in
-            print("Pressed")
-        }), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) { fatalError("init(coder:) not implemented") }

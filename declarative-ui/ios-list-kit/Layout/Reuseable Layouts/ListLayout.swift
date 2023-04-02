@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 struct ListLayout: LayoutProvider {
     
     private let width: NSCollectionLayoutDimension

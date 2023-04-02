@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class DecorationView<V: UICollectionReusableView>: DecorationItemEraser, Hashable {
     
     var id: String
@@ -30,6 +31,7 @@ final class DecorationView<V: UICollectionReusableView>: DecorationItemEraser, H
     }
 }
 
+@available(iOS 13.0, *)
 extension DecorationView: DecorationItemConfig {
     func decoration(layout: UICollectionViewLayout) -> NSCollectionLayoutDecorationItem {
         let item = NSCollectionLayoutDecorationItem.background(elementKind: V.id)

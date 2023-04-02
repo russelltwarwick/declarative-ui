@@ -7,10 +7,12 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 protocol LayoutProvider {
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }
 
+@available(iOS 13.0, *)
 enum LayoutType {
     case custom(_ provider: LayoutProvider)
     

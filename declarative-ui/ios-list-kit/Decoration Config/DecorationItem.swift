@@ -7,14 +7,17 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 protocol DecorationItemEraser {
     func toDecorationItem() -> DecorationItem
 }
 
+@available(iOS 13.0, *)
 protocol DecorationItemConfig {
     func decoration(layout: UICollectionViewLayout) -> NSCollectionLayoutDecorationItem
 }
 
+@available(iOS 13.0, *)
 struct DecorationItem: Hashable  {
     
     let id: Int
@@ -44,6 +47,7 @@ struct DecorationItem: Hashable  {
 
 // MARK: SupplementaryItemConfig
 
+@available(iOS 13.0, *)
 extension DecorationItem: DecorationItemConfig {
     func decoration(layout: UICollectionViewLayout) -> NSCollectionLayoutDecorationItem {
         decorationBlock(layout)

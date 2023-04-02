@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 struct GridLayout: LayoutProvider {
     
     private let rows: Int
@@ -51,6 +52,7 @@ struct GridLayout: LayoutProvider {
     }
 }
 
+@available(iOS 13.0, *)
 struct SupplementaryItemsStandard {
     static var items: [NSCollectionLayoutBoundarySupplementaryItem] {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(55))

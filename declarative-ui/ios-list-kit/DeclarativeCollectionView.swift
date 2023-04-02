@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class DeclarativeCollectionView: UICollectionView {
     
     // MARK: Callbacks
@@ -85,6 +86,7 @@ final class DeclarativeCollectionView: UICollectionView {
     }
 }
 
+@available(iOS 13.0, *)
 extension DeclarativeCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         sections[indexPath.section].items[indexPath.row].didSelect(indexPath: indexPath)
